@@ -1,15 +1,25 @@
 package gowe.utils;
-import java.time.Duration;
-
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
+
+import gowe.enums.FilePath;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.util.Date;
 
 
 public class DriversUils {
@@ -86,6 +96,42 @@ public class DriversUils {
 
 		return driver;
 	}
+
+	/**
+	 * Method to take a screenshot.
+	 *
+	 * @param driver   the WebDriver instance used to capture the screenshot
+	 * @param baseName the base name for the screenshot file
+	 */
+	public static void takeScreenshot(WebDriver driver, String baseName) {
+		try {
+			// Cast the driver to TakesScreenshot
+			TakesScreenshot screenshot = (TakesScreenshot) driver;
+
+			// Capture the screenshot as a file
+			File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+
+			// Create a unique filename using the base name and current timestamp
+			String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+			String screenshotName = baseName + "_" + timestamp + ".png";
+
+			// Define the destination for the screenshot
+			File destFile = new File(FilePath.SCREENSHOTS.getPath() + screenshotName);
+
+			// Copy the screenshot to the destination
+			Files.copy(srcFile.toPath(), destFile.toPath());
+
+			// Print the file path of the saved screenshot
+			System.out.println("Screenshot saved at: " + destFile.getAbsolutePath());
+		} catch (IOException e) {
+			// Handle IO exceptions that may occur during file operations
+			System.err.println("Error while saving screenshot: " + e.getMessage());
+		} catch (WebDriverException e) {
+			// Handle exceptions related to the WebDriver
+			System.err.println("WebDriverException while taking screenshot: " + e.getMessage());
+		}
+	}
+
 
 
 	/**

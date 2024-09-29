@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite">
+    <test name="My Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="gowe.testCases.HomePage"/>
+        </classes>
+    </test>
+</suite>
