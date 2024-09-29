@@ -6,6 +6,7 @@ package gowe.enums;
  * @author Gowtham E
  */
 public enum FilePath {
+    CONFIG("src/test/resources/commonData.properties"),
     SCREENSHOTS("src/test/resources/screenShots/"),
     REPORTS("src/test/resources/reports/"),
     LOGS("logs/");

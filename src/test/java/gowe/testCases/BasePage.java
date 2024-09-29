@@ -3,6 +3,7 @@ package gowe.testCases;
 import gowe.enums.FilePath;
 import gowe.utils.DriversUils;
 import gowe.utils.FileUtils;
+import gowe.utils.PropertyReader;
 import gowe.utils.ReporterUtil;
 
 import java.io.File;
@@ -18,6 +19,7 @@ public class BasePage {
 
     protected WebDriver driver;
     protected ReporterUtil reporter;
+    protected PropertyReader propertyReader;
 
     /**
      * Sets up the WebDriver before each test method.
@@ -29,6 +31,8 @@ public class BasePage {
     @Parameters({"browser"})
     @BeforeClass
     public void setUp(String browser) {
+    	
+        propertyReader = new PropertyReader(FilePath.CONFIG.getPath());
     	FileUtils.deleteFilesInFolder(FilePath.SCREENSHOTS.getPath());
     	FileUtils.deleteFilesInFolder(FilePath.REPORTS.getPath());
         // Initialize the WebDriver instance based on the specified browser

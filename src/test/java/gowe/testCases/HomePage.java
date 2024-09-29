@@ -12,7 +12,7 @@ public class HomePage extends BasePage {
     public void TC_01() {
         reporter.addTest("TC_01");
         try {
-            driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+            driver.get(propertyReader.getProperty("url"));
             SleepUtil.sleepFor10Seconds();
             reporter.writeLogWithoutScreenshot(Status.INFO, "Navigated to OrangeHRM login page");
         } catch (Exception e) {
@@ -24,7 +24,7 @@ public class HomePage extends BasePage {
     public void TC_02() {
         reporter.addTest("TC_02");
         try {
-            driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+            driver.get(propertyReader.getProperty("url"));
             SleepUtil.sleepFor10Seconds();
             reporter.writeLogWithScreenshot(Status.INFO, "Navigated to OrangeHRM login page");
             

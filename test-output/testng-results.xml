@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-29T16:48:25 IST" name="My Test Suite" finished-at="2024-09-29T16:48:58 IST" duration-ms="33638">
+  <suite started-at="2024-09-29T17:30:48 IST" name="My Test Suite" finished-at="2024-09-29T17:30:51 IST" duration-ms="3024">
     <groups>
     </groups>
-    <test started-at="2024-09-29T16:48:25 IST" name="My Test" finished-at="2024-09-29T16:48:58 IST" duration-ms="33638">
+    <test started-at="2024-09-29T17:30:48 IST" name="My Test" finished-at="2024-09-29T17:30:51 IST" duration-ms="3024">
       <class name="gowe.testCases.HomePage">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:gowe.testCases.HomePage@3967e60c]" started-at="2024-09-29T16:48:25 IST" name="setUp" finished-at="2024-09-29T16:48:27 IST" duration-ms="2254" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:gowe.testCases.HomePage@3967e60c]" started-at="2024-09-29T17:30:48 IST" name="setUp" finished-at="2024-09-29T17:30:51 IST" duration-ms="2608" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_01()[pri:0, instance:gowe.testCases.HomePage@3967e60c]" started-at="2024-09-29T16:48:27 IST" name="TC_01" finished-at="2024-09-29T16:48:42 IST" duration-ms="15223" status="PASS">
+        <test-method signature="TC_01()[pri:0, instance:gowe.testCases.HomePage@3967e60c]" started-at="2024-09-29T17:30:51 IST" name="TC_01" finished-at="2024-09-29T17:30:51 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_01 -->
-        <test-method signature="TC_02()[pri:0, instance:gowe.testCases.HomePage@3967e60c]" started-at="2024-09-29T16:48:42 IST" name="TC_02" finished-at="2024-09-29T16:48:55 IST" duration-ms="13148" status="PASS">
+        <test-method signature="TC_02()[pri:0, instance:gowe.testCases.HomePage@3967e60c]" started-at="2024-09-29T17:30:51 IST" name="TC_02" finished-at="2024-09-29T17:30:51 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_02 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:gowe.testCases.HomePage@3967e60c]" started-at="2024-09-29T16:48:55 IST" name="tearDown" finished-at="2024-09-29T16:48:58 IST" duration-ms="2993" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:gowe.testCases.HomePage@3967e60c]" started-at="2024-09-29T17:30:51 IST" name="tearDown" finished-at="2024-09-29T17:30:51 IST" duration-ms="381" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
